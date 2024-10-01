@@ -41,6 +41,7 @@ public class Application {
         final Config config = new Config();
 
         final GetGradeUseCase getGradeUseCase = config.getGradeUseCase();
+        final GetTopGradeUseCase getTopGradeUseCase = config.getTopGradeUseCase();
         final LogGradeUseCase logGradeUseCase = config.logGradeUseCase();
         final FormTeamUseCase formTeamUseCase = config.formTeamUseCase();
         final JoinTeamUseCase joinTeamUseCase = config.joinTeamUseCase();
@@ -61,7 +62,7 @@ public class Application {
             final JPanel logGradeCard = createLogGradeCard(frame, logGradeUseCase);
             final JPanel formTeamCard = createFormTeamCard(frame, formTeamUseCase);
             final JPanel joinTeamCard = createJoinTeamCard(frame, joinTeamUseCase);
-            final JPanel manageTeamCard = createManageTeamCard(frame, leaveTeamUseCase, getAverageGradeUseCase);
+            final JPanel manageTeamCard = createManageTeamCard(frame, leaveTeamUseCase, getAverageGradeUseCase, getTopGradeUseCase);
 
             cardPanel.add(defaultCard, "DefaultCard");
             cardPanel.add(getGradeCard, "GetGradeCard");
